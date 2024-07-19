@@ -1,31 +1,64 @@
-# React + TypeScript + Vite
+# Real-time Chat Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a real-time chat application built with React and Socket.IO. It allows users to send and receive messages in real-time across multiple clients.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Real-time messaging
+- Timestamp for each message
+- Simple and intuitive user interface
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Before you begin, ensure you have met the following requirements:
 
-- Configure the top-level `parserOptions` property like this:
+- Node.js (v14.0.0 or later)
+- npm (v6.0.0 or later)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Installation
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# bring-chatroom
+1. Clone the repository:
+
+2. Install the dependencies for both the server and client:
+   npm install
+
+   ## Usage
+
+To run the application, you need to start both the server and the client.
+
+1. Start the server:
+
+node server.mjs
+
+The server will start running on `http://localhost:3000`.
+
+2. In a new terminal, start the React application:
+   npm run dev
+
+   The React app will start running on `http://localhost:5173`.
+
+3. Open your web browser and navigate to `http://localhost:5173` to use the chat application.
+
+4. Open multiple browser windows to simulate different users chatting.
+
+## Project Structure
+
+- `server.mjs`: The WebSocket server using Socket.IO
+- `src/App.tsx`: The main React component containing the chat functionality
+- `src/main.tsx`: The entry point of the React application
+
+## Technologies Used
+
+- React
+- TypeScript
+- Socket.IO
+- Vite (for building and serving the React app)
+- Express (for the WebSocket server)
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome. Feel free to check [issues page](https://github.com/gray-learn/bring-chatroom/issues) if you want to contribute.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
